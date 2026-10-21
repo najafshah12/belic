@@ -217,3 +217,62 @@ img,svg{max-width:100%}
   .footer-main{grid-template-columns:1fr}
   .footer-brand{grid-column:auto}
 }
+/* Focused mobile portfolio and homepage spacing */
+@media(max-width:600px){
+  .portfolio{padding-top:56px;padding-bottom:58px}
+  .portfolio-top .section-intro h2{max-width:14ch;font-size:clamp(36px,9.5vw,44px);line-height:1.04}
+  .portfolio-top .section-intro p{max-width:34ch}
+  .metric-grid{gap:9px;margin:28px 0 44px}
+  .metric-card{min-width:0;border-radius:12px;padding:14px}
+  .metric-card p{font-size:10px;line-height:1.5}
+  .portfolio-subhead{display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin:38px 0 14px;padding-bottom:12px}
+  .portfolio-subhead h3{font-size:19px}
+  .portfolio-subhead>span{display:block;font-size:8px;line-height:1.5}
+  .portfolio-grid[data-carousel]{padding:0;overflow:hidden}
+  .portfolio-grid[data-carousel] .carousel-controls{justify-content:flex-end;gap:9px;margin:0 2px 13px}
+  .portfolio-grid[data-carousel] .carousel-controls button{width:46px;height:46px;background:#fff;border-color:#c8d9cb;color:#193522;font-size:19px}
+  .portfolio-grid[data-carousel] .carousel-controls button:disabled{opacity:.45}
+  .portfolio-grid[data-carousel] .carousel-track{gap:0}
+  .portfolio-grid[data-carousel] .work-card.reveal{flex-basis:100%;border-radius:13px;opacity:1;transform:scale(1);box-shadow:0 8px 24px #18301d10}
+  .portfolio-grid[data-carousel] .work-card.reveal.visible:not(.is-active){opacity:1;transform:scale(1)}
+  .portfolio-grid[data-carousel] .work-card.reveal.is-active,.portfolio-grid[data-carousel] .work-card.reveal.is-active.visible{transform:scale(1);box-shadow:0 8px 24px #18301d10}
+  .portfolio-grid[data-carousel] .work-card.reveal:hover,.portfolio-grid[data-carousel] .work-card.reveal.is-active:hover{transform:none}
+  .work-art,.work-card:last-child .work-art{height:clamp(190px,58vw,225px);padding:15px}
+  .client-gallery{gap:9px;padding:14px}
+  .client-gallery img{max-height:190px}
+  .work-copy,.showcase-card .work-copy{padding:18px}
+  .work-meta{gap:8px;font-size:8px;letter-spacing:.07em}
+  .work-meta span:first-child{max-width:82%;line-height:1.5}
+  .work-copy h3,.work-copy .project-title,.showcase-card .project-title{font-size:20px;margin:12px 0 7px}
+  .work-copy p,.showcase-card .work-copy p{font-size:12px;line-height:1.7;min-height:0}
+  .client-line{font-size:11px;margin-top:10px}
+  .project-link{min-height:44px;margin-top:10px;font-size:11px}
+  .portfolio-disclaimer{font-size:10px;line-height:1.7;margin:13px 2px 0}
+  .testimonial-heading{margin:45px 0 18px}
+  .testimonial-row{gap:11px}
+  .testimonial-card{border-radius:12px;padding:18px}
+  .testimonial-card p{font-size:12px;line-height:1.75}
+  .testimonial-author{gap:10px}
+  .testimonial-author small{font-size:10px}
+
+  .hero{padding-bottom:34px}
+  .proof{margin-bottom:22px}
+  .home-directions{background:#fff;border-block:1px solid #e3e9e2;padding:66px 0;margin-bottom:24px}
+  .home-directions-head{margin-bottom:27px}
+  .direction-grid{gap:11px}
+  .direction-card{min-height:126px;padding:18px 46px 18px 18px;border-radius:12px}
+  .direction-card h3{font-size:19px;margin:15px 0 7px}
+  .direction-card p{font-size:12px;line-height:1.65}
+  .direction-arrow{right:17px}
+  .home-directions+.closing{margin-top:24px;padding-top:62px;padding-bottom:62px}
+}
+@media(max-width:380px){
+  .portfolio-top .section-intro h2{font-size:35px}
+  .work-art,.work-card:last-child .work-art{height:190px}
+  .work-copy,.showcase-card .work-copy{padding:15px}
+  .work-meta{font-size:7px}
+  .portfolio-subhead h3{font-size:18px}
+  .metric-card{padding:12px}
+  .metric-card p{font-size:9px}
+  .home-directions{padding:58px 0}
+}
