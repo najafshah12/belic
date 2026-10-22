@@ -306,3 +306,49 @@ img,svg{max-width:100%}
   .hero-visual .orbit:after{inset:66px}
   .hero-visual .core{width:102px;height:102px}
 }
+
+/* Mobile orbital illustration and one-card portfolio carousels */
+@media(max-width:600px){
+  .hero-grid{gap:0}
+  .hero-visual{width:100%;max-width:420px;height:clamp(270px,78vw,315px);margin:24px auto 0;overflow:visible;transform:none}
+  .hero-visual .visual-grid{inset:10px 0}
+  .hero-visual .orbit{width:clamp(225px,72vw,270px);height:clamp(225px,72vw,270px)}
+  .hero-visual .orbit:before{inset:11%}
+  .hero-visual .orbit:after{inset:25%}
+  .hero-visual .core{width:clamp(96px,29vw,112px);height:clamp(96px,29vw,112px)}
+  .hero-visual .stage{min-width:0;width:clamp(82px,25vw,96px);padding:9px 10px}
+  .hero-visual .stage b{font-size:11px}
+  .hero-visual .stage small{font-size:8px}
+  .hero-visual .stage.s1{top:7%;left:2%}
+  .hero-visual .stage.s2{top:18%;right:2%}
+  .hero-visual .stage.s3{right:2%;bottom:17%}
+  .hero-visual .stage.s4{left:2%;bottom:7%}
+  .hero-visual .visual-caption{bottom:0;font-size:8px}
+
+  .portfolio-grid[data-carousel]{overflow:hidden;padding:0 0 4px;touch-action:pan-y}
+  .portfolio-grid[data-carousel]>.carousel-controls{position:relative;inset:auto;min-height:48px;justify-content:flex-end;align-items:center;margin:0 0 12px;padding:0 1px;gap:10px}
+  .portfolio-grid[data-carousel]>.carousel-controls button{width:48px;height:48px;flex:0 0 48px;font-size:20px}
+  .portfolio-grid[data-carousel] .carousel-track{width:100%;gap:0;align-items:stretch;transition:transform .48s cubic-bezier(.22,.75,.25,1)}
+  .portfolio-grid[data-carousel] .work-card.reveal{flex:0 0 100%;width:100%;min-width:0;min-height:0;height:auto;display:flex;flex-direction:column;transform:none;border-radius:13px;overflow:hidden;opacity:1;box-shadow:0 8px 24px #18301d10}
+  .portfolio-grid[data-carousel] .work-card.reveal.visible:not(.is-active){transform:none;opacity:1}
+  .portfolio-grid[data-carousel] .work-card.reveal.is-active,.portfolio-grid[data-carousel] .work-card.reveal.is-active.visible{transform:none;opacity:1;box-shadow:0 8px 24px #18301d10}
+  .portfolio-grid[data-carousel] .work-card .work-art{flex:0 0 auto;height:clamp(175px,52vw,215px);padding:13px}
+  .portfolio-grid[data-carousel] .work-card .client-gallery{gap:8px;padding:12px}
+  .portfolio-grid[data-carousel] .work-card .client-gallery img{max-height:190px}
+  .portfolio-grid[data-carousel] .work-copy{flex:1;padding:16px}
+  .portfolio-grid[data-carousel] .work-copy h3,.portfolio-grid[data-carousel] .work-copy .project-title{font-size:19px;line-height:1.15}
+  .portfolio-grid[data-carousel] .work-copy p{font-size:12px;line-height:1.65}
+  .portfolio-grid[data-carousel] .work-meta{font-size:8px}
+  .portfolio-grid[data-carousel] .project-link{min-height:44px}
+}
+@media(max-width:380px){
+  .hero-visual{height:270px;margin-top:20px}
+  .hero-visual .orbit{width:225px;height:225px}
+  .portfolio-grid[data-carousel]>.carousel-controls{margin-bottom:10px}
+  .portfolio-grid[data-carousel] .work-card .work-art{height:175px;padding:10px}
+  .portfolio-grid[data-carousel] .work-copy{padding:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .portfolio-grid[data-carousel] .carousel-track{transition:none}
+  .hero-visual .orbit{animation:none}
+}
