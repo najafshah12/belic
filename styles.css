@@ -276,3 +276,33 @@ img,svg{max-width:100%}
   .metric-card p{font-size:9px}
   .home-directions{padding:58px 0}
 }
+
+/* Final portfolio and mobile hero refinements */
+.metric-grid{align-items:stretch;grid-auto-rows:minmax(158px,1fr)}
+.metric-card{height:100%;min-height:158px}
+.metric-card p{flex:1}
+.success-highlight{grid-column:auto}
+.portfolio-grid[data-carousel]>.carousel-controls{position:relative;inset:auto;z-index:4;justify-content:flex-end;gap:10px;margin:0 0 14px;pointer-events:auto}
+.portfolio-grid[data-carousel]>.carousel-controls button{width:42px;height:42px;border:1px solid #c8d9cb;border-radius:50%;background:#fff;color:#193522;display:grid;place-items:center;cursor:pointer!important;touch-action:manipulation;box-shadow:0 3px 12px #18301d0d}
+.portfolio-grid[data-carousel]>.carousel-controls button:hover:not(:disabled){background:#dff2df;border-color:#94bd97;color:#173e24;box-shadow:0 6px 18px #73a95c30;transform:translateY(-1px)}
+.portfolio-grid[data-carousel]>.carousel-controls button:focus-visible{outline:2px solid #528c5e;outline-offset:3px}
+.portfolio-grid[data-carousel]>.carousel-controls button:disabled{cursor:not-allowed;opacity:.42}
+@media(max-width:850px){.metric-grid{grid-auto-rows:minmax(145px,1fr)}}
+@media(max-width:600px){
+  .metric-grid{grid-auto-rows:minmax(148px,1fr);gap:9px}
+  .metric-card{height:100%;min-height:148px;padding:13px}
+  .metric-card p{font-size:10px;line-height:1.5}
+  .success-highlight{grid-column:auto}
+  .portfolio-grid[data-carousel]>.carousel-controls{position:relative;inset:auto;justify-content:flex-end;margin:0 0 13px;gap:9px}
+  .portfolio-grid[data-carousel]>.carousel-controls button{width:46px;height:46px}
+  .hero-visual{width:min(100%,420px);height:315px;margin:22px auto 0;transform:none;transform-origin:center}
+}
+@media(max-width:380px){
+  .metric-grid{grid-auto-rows:minmax(145px,1fr)}
+  .metric-card{min-height:145px}
+  .hero-visual{height:290px;margin-top:18px;transform:none}
+  .hero-visual .orbit{width:260px;height:260px}
+  .hero-visual .orbit:before{inset:29px}
+  .hero-visual .orbit:after{inset:66px}
+  .hero-visual .core{width:102px;height:102px}
+}
